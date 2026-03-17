@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Interactive Birthday Cake</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="birthday-banner" class="bunting">
+    <svg id="bunting-svg" viewBox="0 0 1000 160" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+        <!-- Row 1 string: HAPPY BIRTHDAY -->
+        <path id="string1" d="M 20,20 Q 510,130 990,20" fill="none" stroke="#333" stroke-width="2"/>
+        <!-- Row 2 string: AENATOO SEXY -->
+        <path id="string2" d="M 80,30 Q 500,120 920,30" fill="none" stroke="#333" stroke-width="2"/>
+    </svg>
+    <div id="pennants-row1" class="pennants-row"></div>
+    <div id="pennants-row2" class="pennants-row"></div>
+</div>
+
+    <div class="cake-container">
+        <div id="cake">
+            <div class="cake-top"></div>
+            <div class="cake-body"></div>
+            <div id="candle-container"></div>
+        </div>
+
+        <div class="input-container">
+            <div class="controls">
+                <!-- Slider -->
+                <input type="range" id="ageSlider" min="0" max="22" step="1" value="0">
+                <span id="ageDisplay">0</span>
+                <button id="increaseBtn">+</button>
+            </div>
+
+            <!-- Blow button initially hidden -->
+            <button id="blowBtn" class="hidden">Blow Candles 💨</button>
+
+            <p id="message">Slide to your age...</p>
+        </div>
+    </div>
+    <button id="moreBtn" class="hidden">You thought this was it?</button>
+    <div id="letter-screen">
+    <p class="hint-text">Click the envelope 💌</p>
+    <div id="envelope" onclick="openEnvelope()">
+        <svg id="envelope-svg" viewBox="0 0 340 240" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="0" width="340" height="240" rx="6" ry="6" fill="#fdf0d0"/>
+            <polygon points="0,0 0,240 170,130" fill="#e8d5a3"/>
+            <polygon points="340,0 340,240 170,130" fill="#dfc99a"/>
+            <polygon points="0,240 340,240 170,130" fill="#f5e2b0"/>
+            <polygon id="svg-flap" points="0,0 340,0 170,120" fill="#e8cf9a"/>
+            <line x1="0" y1="0" x2="340" y2="0" stroke="#d4b97a" stroke-width="1.5"/>
+        </svg>
+    </div>
+
+    <!-- Full letter -->
+    <div id="letter-paper">
+        <button id="close-letter" onclick="closeEnvelope()">↩</button>
+        <div id="letter-content">
+            <p class="letter-date">March 2026</p>
+            <p class="letter-salutation">Dear Aena,</p>
+            <p class="letter-body">
+                Write your heartfelt message here. Replace this with whatever you want to say!
+            </p>
+            <p class="letter-sign">With love,<br><em>Your Name</em></p>
+        </div>
+    </div>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
