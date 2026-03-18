@@ -73,7 +73,7 @@ const cheekyMessages = [
     "A bit young for a mid-life crisis?",
     "Nice try, kiddo.",
     "Don't lie to the cake, it knows.",
-    "Is that your age or your IQ?",
+    "U gonn lie to haji basheer?",
     "Almost at the 'perfect' age...",
     "Only 22-year-olds get the secret wish."
 ];
