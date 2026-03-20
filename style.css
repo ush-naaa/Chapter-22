@@ -512,3 +512,24 @@ body {
     text-align: right;
     font-style: italic;
 }
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+    .bunting {
+        top: -180px;
+    }
+
+    .bunting.show {
+        top: 0px;
+    }
+
+    .pennants-row {
+        gap: 2px;
+    }
+
+    .pennant {
+        width: 36px;
+        height: 50px;
+        font-size: 1rem;
+        padding-top: 6px;
+    }
+}
