@@ -513,9 +513,12 @@ body {
     font-style: italic;
 }
 /* ================= MOBILE ================= */
-@media (max-width: 600px) {
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    /* BANNER */
     .bunting {
-        top: -180px;
+        top: -140px;
     }
 
     .bunting.show {
@@ -523,13 +526,120 @@ body {
     }
 
     .pennants-row {
-        gap: 2px;
+        gap: 1px;
+        flex-wrap: nowrap;
+        width: 100vw;
+        justify-content: center;
     }
 
     .pennant {
-        width: 36px;
-        height: 50px;
-        font-size: 1rem;
-        padding-top: 6px;
+        width: 6.5vw;
+        height: 9vw;
+        font-size: 3vw;
+        padding-top: 1vw;
+        flex-shrink: 0;
+    }
+
+    /* CAKE */
+    .cake-container {
+        bottom: 8vh;
+        width: 100%;
+    }
+
+    #cake {
+        width: 65vw;
+        height: 42vw;
+        margin: 0 auto 8vw auto;
+    }
+
+    .cake-top {
+        width: 65vw;
+        height: 23vw;
+    }
+
+    .cake-body {
+        width: 65vw;
+        height: 28vw;
+        top: 12vw;
+        border-radius: 0 0 33vw 33vw / 0 0 12vw 12vw;
+    }
+
+    /* CONTROLS */
+    #ageSlider {
+        width: 55vw;
+    }
+
+    #ageDisplay {
+        font-size: 6vw;
+    }
+
+    #increaseBtn {
+        font-size: 4vw;
+        padding: 1vw 3vw;
+    }
+
+    #blowBtn {
+        font-size: 4vw;
+        padding: 3vw 7vw;
+    }
+
+    #message {
+        font-size: 3.5vw;
+    }
+
+    /* MORE BUTTON */
+    #moreBtn {
+        font-size: 4vw;
+        padding: 3vw 7vw;
+        bottom: 5vh;
+    }
+
+    /* ENVELOPE */
+    #envelope {
+        width: 75vw;
+        height: 53vw;
+    }
+
+    #envelope-svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hint-text {
+        font-size: 4vw;
+    }
+
+    /* LETTER */
+    #letter-paper {
+        width: 92vw;
+        padding: 10vw 8vw 8vw 10vw;
+        max-height: 85vh;
+    }
+
+    #letter-paper::before {
+        left: 9vw;
+    }
+
+    .letter-date {
+        font-size: 3.5vw;
+    }
+
+    .letter-salutation {
+        font-size: 5.5vw;
+    }
+
+    .letter-body {
+        font-size: 3.8vw;
+        line-height: 1.9;
+    }
+
+    .letter-sign {
+        font-size: 3.8vw;
+    }
+
+    #close-letter {
+        width: 8vw;
+        height: 8vw;
+        font-size: 4vw;
     }
 }
